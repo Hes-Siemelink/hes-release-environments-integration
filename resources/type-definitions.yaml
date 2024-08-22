@@ -19,7 +19,7 @@ types:
       image:
         default: "@registry.url@/@registry.org@/@project.name@:@project.version@"
         transient: true
-      iconLocation: test.png
+      iconLocation: img/test.png
       taskColor: "#667385"
 
   # Example task that interacts with the Release API
@@ -36,5 +36,19 @@ types:
   hes.ReserveEnvironment:
     extends: hes.BaseTask
     description: Reserves an environment
+
+  google.TrainModel:
+    extends: hes.BaseTask
+    label: "Google ML: Train model"
+    hidden-properties:
+      iconLocation: img/google.png
+      taskColor: "#5582E6"
+
+  aws.Publish:
+    extends: hes.BaseTask
+    label: "AWS: Publish Model"
+    hidden-properties:
+      iconLocation: img/aws.png
+      taskColor: "#ED8D45"
 
 
